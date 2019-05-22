@@ -1,1 +1,1 @@
-flask run
+phyton app.py
