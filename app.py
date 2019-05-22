@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
 import main
@@ -12,4 +13,6 @@ def reply():
     response = main.reply(data['menssagem'])
     return jsonify({"response": response})
 
-app.run()
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
