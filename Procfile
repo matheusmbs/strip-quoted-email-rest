@@ -1,1 +1,1 @@
-phyton app.py
+web: gunicorn app:app
